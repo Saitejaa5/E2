@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-telugu: "Noto Sans Telugu", sans-serif;
+
+  --color-coal-950: #120b09;
+  --color-coal-900: #1a1210;
+  --color-coal-800: #241815;
+  --color-coal-700: #33221e;
+  --color-cream-50: #fffaf0;
+  --color-cream-100: #f7ecd7;
+  --color-cream-200: #efdcb8;
+  --color-cream-300: #e2c795;
+  --color-gold-400: #d9a441;
+  --color-gold-500: #c08f2e;
+  --color-chili-500: #c0392b;
+  --color-chili-600: #96281b;
+  --color-chili-700: #7a1f16;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-coal-950);
+  color: var(--color-cream-100);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+::selection {
+  background: #c0392b;
+  color: #fffaf0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #120b09;
+}
+::-webkit-scrollbar-thumb {
+  background: #4a2c26;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c08f2e;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes steam-rise {
+  0% { transform: translateY(0) scaleX(1); opacity: 0; }
+  25% { opacity: 0.7; }
+  50% { transform: translateY(-24px) scaleX(1.4); opacity: 0.45; }
+  100% { transform: translateY(-60px) scaleX(0.8); opacity: 0; }
+}
+
+@keyframes slow-pan {
+  0%, 100% { transform: scale(1.05) translateY(0); }
+  50% { transform: scale(1.12) translateY(-12px); }
+}
+
+@keyframes float-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-steam span {
+  animation: steam-rise 3.4s ease-in-out infinite;
+}
+.animate-slow-pan {
+  animation: slow-pan 18s ease-in-out infinite;
+}
+.animate-float-soft {
+  animation: float-soft 6s ease-in-out infinite;
+}
