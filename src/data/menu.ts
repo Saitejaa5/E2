@@ -196,7 +196,7 @@ export const signatureDishes = [
     telugu: "పేపర్ చికెన్",
     desc: "Crisp, thin-sliced peppered chicken — E2 special.",
     price: "₹260",
-    img: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d6?q=80&w=900&auto=format&fit=crop",
+    img: "https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=900&auto=format&fit=crop",
   },
   {
     name: "Chilli Mushroom",

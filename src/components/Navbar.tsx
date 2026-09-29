@@ -36,9 +36,12 @@ export default function Navbar() {
         aria-label="Primary"
       >
         <a href="#top" className="flex items-center gap-3">
-          <span className="font-display flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-chili-500 to-chili-700 text-lg font-bold text-cream-50 shadow-lg shadow-chili-700/40 ring-1 ring-gold-400/40">
-            E2
-          </span>
+          <img
+            src="/e2-logo.png"
+            alt="E2 Restaurant official logo"
+            className="h-10 w-10 rounded-lg object-contain sm:h-11 sm:w-11"
+            loading="eager"
+          />
           <span className="leading-tight">
             <span className="font-display block text-[17px] font-semibold tracking-wide text-cream-50">
               E2 Restaurant

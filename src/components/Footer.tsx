@@ -7,9 +7,12 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <span className="font-display flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-chili-500 to-chili-700 text-lg font-bold text-cream-50 ring-1 ring-gold-400/40">
-              E2
-            </span>
+            <img
+              src="/e2-logo.png"
+              alt="E2 Restaurant official logo"
+              className="h-12 w-12 rounded-lg object-contain sm:h-14 sm:w-14"
+              loading="lazy"
+            />
             <div>
               <p className="font-display text-lg font-semibold text-cream-50">E2 Restaurant</p>
               <p className="text-xs tracking-[0.18em] text-gold-400 uppercase">
