@@ -14,7 +14,9 @@ export interface MenuCategory {
 }
 
 export const PHONE_DISPLAY = "080199 39399";
-export const PHONE_LINK = "tel:+918019939399";
+export const PHONE_LINK = "tel:08019939399";
+export const ZOMATO_URL =
+  "https://www.zomato.com/hyderabad/e2-restaurant-bachupally";
 export const ADDRESS =
   "KVR Valley, Springs Wood's, Shambipur Road, Mallampet, Hyderabad, Telangana 500118";
 export const MAPS_URL =

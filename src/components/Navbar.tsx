@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FiMenu, FiPhone, FiX } from "react-icons/fi";
 import { PHONE_DISPLAY, PHONE_LINK } from "../data/menu";
+import { openOrderModal } from "./OrderModal";
 
 const links = [
   { label: "About", href: "#about" },
@@ -71,12 +72,13 @@ export default function Navbar() {
           >
             <FiPhone size={14} /> {PHONE_DISPLAY}
           </a>
-          <a
-            href="#menu"
-            className="rounded-full bg-gradient-to-b from-chili-500 to-chili-700 px-5 py-2.5 text-[13px] font-bold text-white shadow-lg shadow-chili-700/40 transition hover:brightness-110"
+          <button
+            type="button"
+            onClick={openOrderModal}
+            className="cursor-pointer rounded-full bg-gradient-to-b from-chili-500 to-chili-700 px-5 py-2.5 text-[13px] font-bold text-white shadow-lg shadow-chili-700/40 transition hover:brightness-110"
           >
             Order Now
-          </a>
+          </button>
         </div>
 
         <button
@@ -116,13 +118,16 @@ export default function Navbar() {
                 >
                   <FiPhone size={15} /> Call
                 </a>
-                <a
-                  href="#menu"
-                  onClick={() => setOpen(false)}
-                  className="flex-1 rounded-full bg-gradient-to-b from-chili-500 to-chili-700 px-4 py-3 text-center text-sm font-bold text-white"
+                <button
+                  type="button"
+                  onClick={() => {
+                    setOpen(false);
+                    openOrderModal();
+                  }}
+                  className="flex-1 cursor-pointer rounded-full bg-gradient-to-b from-chili-500 to-chili-700 px-4 py-3 text-center text-sm font-bold text-white"
                 >
                   Order Now
-                </a>
+                </button>
               </div>
             </div>
           </motion.div>

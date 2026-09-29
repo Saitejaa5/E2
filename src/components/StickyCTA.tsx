@@ -1,5 +1,6 @@
 import { FiNavigation, FiPhone } from "react-icons/fi";
 import { MAPS_URL, PHONE_LINK } from "../data/menu";
+import { openOrderModal } from "./OrderModal";
 
 export default function StickyCTA() {
   return (
@@ -11,12 +12,13 @@ export default function StickyCTA() {
         >
           <FiPhone size={14} /> Call
         </a>
-        <a
-          href="#menu"
-          className="flex items-center justify-center rounded-full bg-gold-400 py-3 text-[13px] font-bold text-coal-950"
+        <button
+          type="button"
+          onClick={openOrderModal}
+          className="flex cursor-pointer items-center justify-center rounded-full bg-gold-400 py-3 text-[13px] font-bold text-coal-950"
         >
           Order
-        </a>
+        </button>
         <a
           href={MAPS_URL}
           target="_blank"

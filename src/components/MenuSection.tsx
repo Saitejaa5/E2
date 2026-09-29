@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { FiPhone } from "react-icons/fi";
-import { PHONE_LINK, menuData } from "../data/menu";
+import { menuData } from "../data/menu";
+import { openOrderModal } from "./OrderModal";
 import Reveal, { SectionHeading } from "./Reveal";
 
 export default function MenuSection() {
@@ -108,14 +109,15 @@ export default function MenuSection() {
             <p className="text-sm text-cream-100/60">
               Craving something? Call and it's on the flame in minutes.
             </p>
-            <motion.a
-              href={PHONE_LINK}
+            <motion.button
+              type="button"
+              onClick={openOrderModal}
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              className="mt-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-b from-chili-500 to-chili-700 px-8 py-4 text-[15px] font-bold text-white shadow-xl shadow-chili-700/40"
+              className="mt-4 inline-flex cursor-pointer items-center gap-2 rounded-full bg-gradient-to-b from-chili-500 to-chili-700 px-8 py-4 text-[15px] font-bold text-white shadow-xl shadow-chili-700/40"
             >
               <FiPhone size={16} /> Order Now
-            </motion.a>
+            </motion.button>
           </Reveal>
         </div>
       </div>

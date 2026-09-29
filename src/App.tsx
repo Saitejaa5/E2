@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Location from "./components/Location";
 import MenuSection from "./components/MenuSection";
 import Navbar from "./components/Navbar";
+import OrderModal from "./components/OrderModal";
 import Reviews from "./components/Reviews";
 import Signature from "./components/Signature";
 import StickyCTA from "./components/StickyCTA";
@@ -58,6 +59,7 @@ export default function App() {
       </main>
       <Footer />
       <StickyCTA />
+      <OrderModal />
     </div>
   );
 }

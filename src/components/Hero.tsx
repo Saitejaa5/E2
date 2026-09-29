@@ -1,7 +1,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { FiMapPin, FiPhone, FiStar } from "react-icons/fi";
-import { PHONE_DISPLAY, PHONE_LINK } from "../data/menu";
+import { PHONE_DISPLAY } from "../data/menu";
+import { openOrderModal } from "./OrderModal";
 
 export default function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -98,14 +99,15 @@ export default function Hero() {
           >
             View Menu
           </motion.a>
-          <motion.a
-            href={PHONE_LINK}
+          <motion.button
+            type="button"
+            onClick={openOrderModal}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="flex items-center justify-center gap-2 rounded-full border border-cream-100/25 bg-white/8 px-8 py-4 text-[15px] font-bold text-cream-50 backdrop-blur-md transition hover:border-gold-400/60"
+            className="flex cursor-pointer items-center justify-center gap-2 rounded-full border border-cream-100/25 bg-white/8 px-8 py-4 text-[15px] font-bold text-cream-50 backdrop-blur-md transition hover:border-gold-400/60"
           >
             <FiPhone size={16} /> Order Now · {PHONE_DISPLAY}
-          </motion.a>
+          </motion.button>
         </motion.div>
 
         <motion.div
